@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .darkness {
+            background-color: black;
+            color: white;
+            font-family: sans-serif;
+        }
+        
+        .light {
+            background-color: lemonchiffon;
+            color: blue;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body id = "mainContent" class="darkness">
+    <img id="lightBulb" src="img/bulboff.gif" width="150px">
+    <div>
+        <button onclick="bulbon()">Lights On!</button>
+        <button onclick="bulboff()">Lights Off!</button>
+    </div>
+    <div id="status"></div>
+    
+    <script>
+    
+    let mainContent = document.getElementById("mainContent");
+        
+        function bulbon() {
+           document.getElementById("lightBulb").src="img/bulbon.gif";
+           document.getElementById("status").innerHTML = "<h2>It's night time!</h2>";
+           mainContent.classList.remove("light");
+           mainContent.classList.add("darkness");
+           
+        }
+        
+        function bulboff() {
+            document.getElementById("lightBulb").src="img/bulboff.gif";
+            document.getElementById("status").innerHTML = "<h2>It's day time!</h2>";
+            mainContent.classList.remove("darkness");
+            mainContent.classList.add("light");
+        }
+        
+       
+        
+    </script>
+</body>
+</html>
